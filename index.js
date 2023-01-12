@@ -145,3 +145,6 @@ export class Consolidator {
     return consolidation;
   }
 }
+
+const Consolidator = () => {};
+export default Consolidator;
