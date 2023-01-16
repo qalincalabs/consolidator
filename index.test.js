@@ -16,7 +16,6 @@ test("Main sample", () => {
 
   const updatedOrder = {
     ids: ["R3I432I4"],
-    number: "R3I432I4",
     lines: [
       {
         name: "Carrots",
@@ -25,6 +24,7 @@ test("Main sample", () => {
         },
       },
     ],
+    number: "R3I432I4",
   };
 
   const consolidatedOrder = new Consolidator(updatedOrder, currentOrder);
