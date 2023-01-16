@@ -1,7 +1,5 @@
 import EJSON from 'ejson'
 
-export const EJSONLib = EJSON
-
 export function findCollectionItemByItemIds(list, item) {
   for (const ci of list) {
     const foundId = ci.ids.find((i) => item.ids.includes(i));
@@ -48,17 +46,6 @@ export const aggressiveConsolidation = {
   action: "setUnlessSourceEmpty",
 };
 
-// from https://gist.github.com/davidfurlong/463a83a33b70a3b6618e97ec9679e490
-const replacer = (key, value) =>
-  value instanceof Object && !(value instanceof Array)
-    ? Object.keys(value)
-        .sort()
-        .reduce((sorted, key) => {
-          sorted[key] = value[key];
-          return sorted;
-        }, {})
-    : value;
-
 export class Consolidator {
   constructor(value, current) {
     this.value = value;
@@ -100,8 +87,8 @@ export class Consolidator {
 
   isSameAsConsolidation(profile) {
     return (
-      EJSONLib.stringify(this.current, replacer) ===
-      EJSONLib.stringify(this.consolidate(profile), replacer)
+      EJSON.stringify(this.current) ===
+      EJSON.stringify(this.consolidate(profile))
     );
   }
 

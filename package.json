@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@qalincalabs/consolidator",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Consolidate data for logCiCa based on plural ids",
   "main": "index.js",
   "scripts": {

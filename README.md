@@ -4,4 +4,4 @@ Consolidate data for logCiCa based on plural ids
 
 ## TODOs
 
-* isSameAsConsolidation not working with mongo decimal (because toJSON is used ...)
+* EJSON cannot be configured with upper library (like to be able to recognise mongo decimal)
