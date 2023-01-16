@@ -1,5 +1,7 @@
 import EJSON from 'ejson'
 
+export const EJSONLib = EJSON
+
 export function findCollectionItemByItemIds(list, item) {
   for (const ci of list) {
     const foundId = ci.ids.find((i) => item.ids.includes(i));
@@ -98,8 +100,8 @@ export class Consolidator {
 
   isSameAsConsolidation(profile) {
     return (
-      EJSON.stringify(this.current, replacer) ===
-      EJSON.stringify(this.consolidate(profile), replacer)
+      EJSONLib.stringify(this.current, replacer) ===
+      EJSONLib.stringify(this.consolidate(profile), replacer)
     );
   }
 
