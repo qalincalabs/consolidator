@@ -1,13 +1,4 @@
-import EJSON from 'ejson'
-
-export function findCollectionItemByItemIds(list, item) {
-  for (const ci of list) {
-    const foundId = ci.ids.find((i) => item.ids.includes(i));
-
-    if (foundId != null) return ci;
-    else continue;
-  }
-}
+import { EJSON } from 'bson'
 
 // unless rules applied one after the other
 // only setIfEmpty and setUnlessSourceEmpty
@@ -136,5 +127,3 @@ export class Consolidator {
     return consolidation;
   }
 }
-
-export default Consolidator;
