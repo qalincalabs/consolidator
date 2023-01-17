@@ -36,7 +36,11 @@ test("Main sample", () => {
   };
 
   console.log(
-    EJSON.stringify(consolidatedOrder.consolidate(consolidationProfile), null, 2)
+    EJSON.stringify(
+      consolidatedOrder.consolidate(consolidationProfile),
+      null,
+      2
+    )
   );
 
   console.log(consolidatedOrder.isSameAsConsolidation(consolidationProfile));

@@ -1,4 +1,4 @@
-import { EJSON } from 'bson'
+import { EJSON } from "bson";
 
 // unless rules applied one after the other
 // only setIfEmpty and setUnlessSourceEmpty
