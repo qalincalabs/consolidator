@@ -9,7 +9,7 @@ export async function consolidateCollection(
 ) {
   const input = contextInput[collectionName];
 
-  if (input == null) return null;
+  if (input == null || input.length == 0) return null;
 
   const rule = strategy.rules.find((r) => r.collection == collectionName);
   const profile = strategy.profiles.find((p) => p.key == rule.profileKey);
