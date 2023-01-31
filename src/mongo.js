@@ -1,4 +1,3 @@
-import { EJSON } from "bson";
 import { Consolidator } from "./consolidator.js";
 
 export async function consolidateCollection(
@@ -14,7 +13,7 @@ export async function consolidateCollection(
   const rule = strategy.rules.find((r) => r.collection == collectionName);
 
   if(rule == null)
-    return 
+    return []
 
   const profile = strategy.profiles.find((p) => p.key == rule.profileKey);
 
