@@ -12,6 +12,10 @@ export async function consolidateCollection(
   if (input == null) return null;
 
   const rule = strategy.rules.find((r) => r.collection == collectionName);
+
+  if(rule == null)
+    return 
+
   const profile = strategy.profiles.find((p) => p.key == rule.profileKey);
 
   return await findAndConsolidate(
